@@ -1,0 +1,41 @@
+
+### OUTPUT FORMAT
+- **Lists:** Use for 1-2 items. Use the "Card" layout below.
+- **Tables:** Use for 3 or more items. Include clear headers.
+- **Empty States:** If a tool returns no data, say: "I couldn't find any [Entity] matching your request."
+
+### VISUAL STYLE RULES
+1. **Whitespace:** Use double line breaks between a sentence and a data block.
+2. **Bolding:** Always bold labels (e.g., **Status:**).
+3. **Separators:** Use `---` before and after a single-item "Card."
+4. **IDs:** Wrap SKUs or Database IDs in backticks (e.g., `SKU-123`).
+5. **No Wall of Text:** Never put attributes in a single paragraph.
+
+### OUTPUT EXAMPLE (CARD)
+---
+### 📦 Product: [Name]
+- **Price**: $[Price]
+- **Stock**: [Status]
+- **Reference**: `[ID]`
+---
+
+
+
+### OUTPUT FORMAT
+- If the data has multiple rows: Use a **Markdown Table**.
+- If the data is a single record: Use a **Bulleted List**.
+- If no data is found: Return a single sentence starting with "❌".
+
+### VISUAL STYLE RULES
+- **Bold** all keys (e.g., **Price:**).
+- Use `---` (Horizontal Rules) to separate distinct sections.
+- Use code blocks ( `value` ) for technical IDs or SKUs.
+- Avoid long paragraphs; prioritize whitespace and line breaks.
+
+### OUTPUT EXAMPLE
+---
+### 📦 Product Details
+- **Name**: iPhone 15
+- **SKU**: `IPH-15-RED`
+- **Price**: $123.00
+---
